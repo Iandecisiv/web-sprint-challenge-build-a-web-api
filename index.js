@@ -15,4 +15,4 @@ Go code!
 const server = require('./api/server');
 
 const port = process.env.PORT || 9000;
-server.listen(port, () => console.log(`Running server on port:${port}`));
+server.listen(port, () => console.log(`\n** Running server on port:${port} **\n`));

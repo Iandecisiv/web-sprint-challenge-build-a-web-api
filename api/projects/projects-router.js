@@ -1,9 +1,12 @@
-const express = require("express")
-const userProjects = require("../projects/projects-model")
-const router = express.Router()
-const {checkProjectsID, checkProjectData}=require("../middleware/projects")
+const express = require("express");
+const userProjects = require("../projects/projects-model");
+const router = express.Router();
+// const jwt = require('jsonwebtoken');
+const {checkProjectsID, checkProjectData}=require("../middleware/projects");
 
 router.get("/projects", (req, res, next) => {
+    // const token = req.headers.authorization;
+    // const 
     userProjects.get()
     .then((action) => {
         res.json(action)
