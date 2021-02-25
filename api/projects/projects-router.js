@@ -19,7 +19,6 @@ router.get("/projects/:id", checkProjectsID(), (req, res, next) => {
 
 router.post("/projects", checkProjectData(), (req, res, next) => {
     let body = req.body
-    // console.log("error in the post request",)
     userProjects.insert(body)
     .then((project) => {
         res.status(201).json(project)
